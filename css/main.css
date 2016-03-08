@@ -12,6 +12,7 @@ body {
 	position: relative;
 	z-index: 1;
 	overflow: hidden;
+	display: none;
 }
 .main h1 {
 	margin-top: 2em;
@@ -20,22 +21,18 @@ body {
 	font-weight: 500 italic;
 }
 .input{
-	border: 1px solid red;
 	text-align: center;
 
 }
 .how-to{
 	text-align: center;
+	display: none;
 }
 .how-to p{
 	color: black;
 	text-align: center;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 300;
-}
-#new-item-input{
-}
-#add-to-list-button{
 }
 .list-input {
 	border-radius: 1em;
@@ -56,7 +53,15 @@ body {
 	display: inline-block;
 	margin-right: 1em;
 	font-family: 'Raleway';
+	padding-left: 1em;
 }
 .delete-hidden{
 	display: none !important;
+}
+.fa-times{
+	padding-left: 1em;
+	margin-top: 1px
+}
+.markoff{
+	text-decoration: line-through; 
 }
