@@ -1,10 +1,28 @@
 $("#add-to-list-button").on("click",function(){
-	console.log($("#new-item-input").val())
-	console.log("add button clicked")
-	var listItem ='<div class="list-item"><h5>'+$("#new-item-input").val()+'</h5><i class="fa fa-square-o"></i><i class="fa fa-times"></i></div>'
-	$(".list").append(listItem)
-	$('#new-item-input').val('');
-})
+	if ($('#new-item-input').val()!=''){
+		console.log($("#new-item-input").val())
+		console.log("add button clicked")
+		var listItem ='<div class="list-item"><h5>'+$("#new-item-input").val()+'</h5><i class="fa fa-square-o"></i><i class="fa fa-times"></i></div>'
+		$(".list").append(listItem)
+		$('#new-item-input').val('');
+	}else{
+			alert("You must enter something into the input field!!!")
+		}
+});
+$("#new-item-input").on("keyup",function(e){
+	if (e.keyCode == 13) {
+		if ($('#new-item-input').val()!=''){
+			console.log($("#new-item-input").val())
+			console.log("add button clicked")
+			var listItem ='<div class="list-item"><h5>'+$("#new-item-input").val()+'</h5><i class="fa fa-square-o"></i><i class="fa fa-times"></i></div>'
+			$(".list").append(listItem)
+			$('#new-item-input').val('');
+			console.log('press enter')
+		}else{
+			alert("You must enter something into the input field!!!")
+		}
+	}
+});
 $(".list").on("click",".list-item",function(){
 	console.log('delete clicked')
 	console.log(this)
@@ -30,3 +48,5 @@ function doIntro(){
 $(function(){
 	doIntro()
 })
+
+

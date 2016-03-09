@@ -54,6 +54,8 @@ body {
 	margin-right: 1em;
 	font-family: 'Raleway';
 	padding-left: 1em;
+	vertical-align: middle;
+	height: 1.8em;
 }
 .delete-hidden{
 	display: none !important;
